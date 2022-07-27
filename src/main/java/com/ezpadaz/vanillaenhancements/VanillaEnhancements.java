@@ -3,10 +3,11 @@ package com.ezpadaz.vanillaenhancements;
 import com.ezpadaz.vanillaenhancements.Listeners.JoinListener;
 import com.ezpadaz.vanillaenhancements.Utils.MessageHelper;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class VanillaEnhancements extends JavaPlugin {
-
+    public FileConfiguration config = getConfig();
     private static VanillaEnhancements instance;
 
     public static VanillaEnhancements getInstance() {
