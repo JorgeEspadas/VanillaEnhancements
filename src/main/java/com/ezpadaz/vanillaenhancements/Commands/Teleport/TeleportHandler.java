@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+
 import java.util.HashMap;
 
 public class TeleportHandler {
@@ -49,7 +50,7 @@ public class TeleportHandler {
         Material debajo = location.getWorld().getBlockAt(x, y - 1, z).getType();
         Material inferior = location.getWorld().getBlockAt(x, y - 2, z).getType();
 
-        if((bloque == Material.AIR) && (debajo == Material.AIR) && (inferior == Material.AIR)){
+        if ((bloque == Material.AIR) && (debajo == Material.AIR) && (inferior == Material.AIR)) {
             // el jugador origen esta cayendo.
             return false;
         }
