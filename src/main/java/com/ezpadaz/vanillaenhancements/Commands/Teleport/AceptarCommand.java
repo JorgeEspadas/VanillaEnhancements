@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerTeleportEvent;
 
 public class AceptarCommand {
     public AceptarCommand() {
@@ -26,9 +27,15 @@ public class AceptarCommand {
                             MessageHelper.send(sender, "&cEl usuario que origino esta peticion no existe o no se encuentra.");
                             return true;
                         }
-
                         Location originLocation = origen.getLocation();
-                        ((Player) sender).teleport(originLocation);
+
+                        if (handler.isSafeToTeleport(originLocation) && !origen.isFlying() && !origen.isGliding()) {
+                            ((Player) sender).teleport(originLocation, PlayerTeleportEvent.TeleportCause.PLUGIN);
+                        } else {
+                            MessageHelper.send(sender, "&cLa ubicacion no era segura, peticion cancelada.");
+                            handler.removePlayerRequest(sender.getName());
+                            return true;
+                        }
 
                         MessageHelper.send(sender, "&6Peticion aceptada con exito!.");
                         MessageHelper.send(origen, "&c%s &6acepto tu peticion!".formatted(sender.getName()));
