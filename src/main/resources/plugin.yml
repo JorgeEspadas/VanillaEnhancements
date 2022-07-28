@@ -1,6 +1,6 @@
 name: VanillaEnhancements
 version: '${version}'
-main: com.ezpadaz.vanillaenhancements.Vanillaenhancements
+main: com.ezpadaz.vanillaenhancements.VanillaEnhancements
 api-version: 1.19
 prefix: VanillaEnhancements
 load: STARTUP

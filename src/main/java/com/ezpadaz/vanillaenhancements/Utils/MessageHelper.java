@@ -14,6 +14,6 @@ public class MessageHelper {
     }
 
     public static void console(String message) {
-        send(VanillaEnhancements.getInstance().getServer().getConsoleSender(), message, "&a");
+        send(VanillaEnhancements.getInstance().getServer().getConsoleSender(), "&6[&5VanillaEnhancements&6]&f "+message, "&a");
     }
 }
