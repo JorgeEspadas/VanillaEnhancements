@@ -1,4 +1,4 @@
-package com.ezpadaz.vanillaenhancements.Listeners;
+package com.ezpadaz.vanillaenhancements.Listeners.Events;
 
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
