@@ -31,6 +31,7 @@ public class AceptarCommand {
 
                         if (handler.isSafeToTeleport(originLocation) && !origen.isFlying() && !origen.isGliding()) {
                             ((Player) sender).teleport(originLocation, PlayerTeleportEvent.TeleportCause.PLUGIN);
+                            handler.removePlayerRequest(sender.getName());
                         } else {
                             MessageHelper.send(sender, "&cLa ubicacion no era segura, peticion cancelada.");
                             handler.removePlayerRequest(sender.getName());
@@ -49,7 +50,7 @@ public class AceptarCommand {
 
             @Override
             public String getUsage() {
-                return "/aceptar";
+                return "/aceptar [Acepta cualquier solicitud de teletransporte pendiente.]";
             }
         };
     }

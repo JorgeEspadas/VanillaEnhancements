@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 
 public class MessageHelper {
     public static void send(CommandSender sender, String message) {
-        send(sender, message, "&6[&5VE&6]&f");
+        send(sender, message, "&6[&5VE&6]&f ");
     }
 
     public static void send(CommandSender sender, String message, String prefix) {

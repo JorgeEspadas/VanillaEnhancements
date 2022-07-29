@@ -1,9 +1,8 @@
 package com.ezpadaz.vanillaenhancements;
 
-import com.ezpadaz.vanillaenhancements.Commands.Teleport.AceptarCommand;
-import com.ezpadaz.vanillaenhancements.Commands.Teleport.IrCommand;
-import com.ezpadaz.vanillaenhancements.Commands.Teleport.TraerCommand;
+import com.ezpadaz.vanillaenhancements.Commands.Teleport.*;
 import com.ezpadaz.vanillaenhancements.Listeners.Events.JoinListener;
+import com.ezpadaz.vanillaenhancements.Listeners.Player.PlayerListener;
 import com.ezpadaz.vanillaenhancements.Utils.MessageHelper;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -21,10 +20,13 @@ public final class VanillaEnhancements extends JavaPlugin {
     public void onEnable() {
         instance = this;
         Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
 
         new IrCommand();
         new TraerCommand();
         new AceptarCommand();
+        new RechazarCommand();
+        new RegresarCommand();
 
         MessageHelper.console("&6Plugin status: &aActive");
     }

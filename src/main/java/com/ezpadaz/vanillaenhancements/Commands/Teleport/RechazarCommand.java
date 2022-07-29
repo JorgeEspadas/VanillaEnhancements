@@ -21,6 +21,7 @@ public class RechazarCommand {
                 Player origen = Bukkit.getPlayer(request.getOrigen());
 
                 MessageHelper.send(sender, "&6Rechazaste la solicitud de %s".formatted(request.getOrigen()));
+                handler.removePlayerRequest(sender.getName());
                 if (origen != null) {
                     MessageHelper.send(origen, "&c%s &6rechazo la solicitud".formatted(sender.getName()));
                 }
@@ -29,7 +30,7 @@ public class RechazarCommand {
 
             @Override
             public String getUsage() {
-                return "/rechazar";
+                return "/rechazar  [Rechaza la solicitud de transporte]";
             }
         };
     }
