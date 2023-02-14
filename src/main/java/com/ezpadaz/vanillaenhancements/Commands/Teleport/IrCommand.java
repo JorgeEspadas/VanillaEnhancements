@@ -11,7 +11,7 @@ public class IrCommand {
            @Override
            public boolean onCommand(CommandSender sender, String[] arguments) {
                Player jugador = (Player) sender;
-
+            
                MessageHelper.send(sender, "&cNo implementado aun!");
                return true;
            }

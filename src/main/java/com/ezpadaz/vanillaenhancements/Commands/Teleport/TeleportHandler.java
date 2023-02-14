@@ -65,7 +65,6 @@ public class TeleportHandler {
         int y = location.getBlockY();
         int z = location.getBlockZ();
 
-        Material arriba = location.getWorld().getBlockAt(x, y + 1, z).getType();
         Material bloque = location.getWorld().getBlockAt(x, y, z).getType();
         Material debajo = location.getWorld().getBlockAt(x, y - 1, z).getType();
         Material inferior = location.getWorld().getBlockAt(x, y - 2, z).getType();

@@ -1,0 +1,8 @@
+name: VanillaEnhancements
+version: '${version}'
+main: com.ezpadaz.vanillaenhancements.VanillaEnhancements
+api-version: 1.19
+prefix: VanillaEnhancements
+load: STARTUP
+authors: [ EzpadaZ ]
+description: A Plugin that provides basic commands that improve the vanilla experience

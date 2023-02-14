@@ -1,5 +1,6 @@
 package com.ezpadaz.vanillaenhancements;
 
+import com.ezpadaz.vanillaenhancements.Commands.CommandBootloader;
 import com.ezpadaz.vanillaenhancements.Commands.Teleport.*;
 import com.ezpadaz.vanillaenhancements.Listeners.Events.JoinListener;
 import com.ezpadaz.vanillaenhancements.Listeners.Player.PlayerListener;
@@ -21,13 +22,8 @@ public final class VanillaEnhancements extends JavaPlugin {
         instance = this;
         Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
-
-        new IrCommand();
-        new TraerCommand();
-        new AceptarCommand();
-        new RechazarCommand();
-        new RegresarCommand();
-
+        new CommandBootloader();
+        saveDefaultConfig();
         MessageHelper.console("&6Plugin status: &aActive");
     }
 

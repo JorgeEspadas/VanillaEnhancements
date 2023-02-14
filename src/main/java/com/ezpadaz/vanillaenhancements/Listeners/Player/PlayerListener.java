@@ -3,7 +3,6 @@ package com.ezpadaz.vanillaenhancements.Listeners.Player;
 import com.ezpadaz.vanillaenhancements.Commands.Teleport.TeleportHandler;
 import com.ezpadaz.vanillaenhancements.Utils.MessageHelper;
 import com.ezpadaz.vanillaenhancements.VanillaEnhancements;
-import org.apache.logging.log4j.message.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
