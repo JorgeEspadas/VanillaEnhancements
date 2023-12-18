@@ -4,27 +4,32 @@ This is a plugin that replaces my own need of having 2-3 separate plugins doing 
 Instead of me having to wait for other devs to update their plugins this is intended for me and my own hosted server to
 be able to upgrade to the latest minecraft version posible.
 
-This is also a spanish plugin, i will add more languages through a lang.yml file later when features are complete as well as configuration options through a yaml file..
+If you see this and it is a public repository, download with caution, i'm working slowly on this as i'm busy IRL.
 
-### Planned Commands
+### Features
 
-- /ir [nombre] *para ir hacia un jugador*
-- /traer [nombre] *para llevar un jugador hacía tí*
-- /guardar [niveles] *para guardar experiencia en una botella*
-- /mochila  *para tener un espacio para guardar cosas, configurable via permisos*
-- /casa *para ir a un punto especificado por el usuario*
-- /crearcasa *guardar ubicación actual como la casa activa*
-- /regresar *regresar a la última ubicación conocida (por muerte o por ir hacía otro jugador)*
+- Teleport commands (go/back/bring)
+- Overseer for TPS performance
+- Double XP Programmed events (through realistic seasons, if not, needs manual activation).
+- Faster minecarts
+- Fixed bookshelf for compatibility with other enchantment plugins (such as advanced enchantments).
+- Double XP affects skills.
+- MongoDB telemetry (login/logout, death position and inventory serialization).
+- Other gameplay "improvements".
+
 
 ### Planned Features
 
-- Complete mongoDB integration for player data logging.
-- More enchantments than the default minecraft ones.
+- Inventory de-serialization and restoration for player
+- Death chests
+- Villager capture (kinda like pokemon)
 
 ### Requirements
 
 - Minecraft 1.19
+- MongoDB
 - PaperMC
+- As of now, some plugins are required (all those that are integrated, if not the plugin won't boot, i'm already working on a fix for this).
 
 ### Side notes
 
